@@ -1,0 +1,17 @@
+22:37:24 **** Incremental Build of configuration Debug for project 1_2 Debug Buzzer ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -DUSE_FULL_LL_DRIVER -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1_2 Debug Buzzer.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Code\STM32_Drone\1_2 Debug Buzzer\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_2 Debug Buzzer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_2 Debug Buzzer.elf
+ 
+arm-none-eabi-size  1_2\ Debug\ Buzzer.elf 
+arm-none-eabi-objdump -h -S 1_2\ Debug\ Buzzer.elf  > "1_2 Debug Buzzer.list"
+   text	   data	    bss	    dec	    hex	filename
+   8504	     12	   1572	  10088	   2768	1_2 Debug Buzzer.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_2 Debug Buzzer.list
+ 
+
+22:37:25 Build Finished. 0 errors, 0 warnings. (took 864ms)
+
